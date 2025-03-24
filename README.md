@@ -1,4 +1,4 @@
-# legacy-minted_memories
+# legacy-pokemon
 
 ## Getting Started
 
