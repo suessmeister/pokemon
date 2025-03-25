@@ -1,7 +1,9 @@
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageEnhance
 import random
 import requests
 from io import BytesIO
+import math
+import os
 
 # Type to light color mapping for readable backgrounds
 TYPE_COLORS = {
@@ -117,33 +119,18 @@ def create_nft_card(name, pokemon_type, attack, defense, hp, attacks):
     # Convert to RGB for saving
     img = img.convert('RGB')
     
-    # Save image
-    img.save(f"{name}_nft.png")
-    print(f"NFT card saved as {name}_nft.png")
+    # Ensure mons directory exists
+    os.makedirs(os.path.join(os.path.dirname(__file__), '../../mons'), exist_ok=True)
+    
+    # Save image in mons directory
+    save_path = os.path.join(os.path.dirname(__file__), '../../mons', f"{name}_nft.png")
+    img.save(save_path)
+    print(f"NFT card saved as {save_path}")
+    return save_path
 
-
-# User input for card details
-name = input("Enter the name of your NFT card (e.g., 'Charizard'): ")
-pokemon_type = input(f"Enter the Pokémon type {list(TYPE_COLORS.keys())}: ").lower()
-while pokemon_type not in TYPE_COLORS:
-    print("Invalid type! Please choose from the available types.")
-    pokemon_type = input(f"Enter the Pokémon type {list(TYPE_COLORS.keys())}: ").lower()
-
-attack = int(input("Enter the attack value "))
-defense = int(input("Enter the defense value "))
-hp = int(input("Enter the HP value  "))
-
-# User input for attacks (2-3 attacks)
-attacks = []
-num_attacks = int(input("Enter the number of attacks (2 or 3): "))
-while num_attacks not in [2, 3]:
-    print("Please enter either 2 or 3 for the number of attacks.")
-    num_attacks = int(input("Enter the number of attacks (2 or 3): "))
-
-for i in range(num_attacks):
-    attack_name = input(f"Enter name for Attack {i+1}: ")
-    attack_damage = int(input(f"Enter damage for Attack {i+1}: "))
-    attacks.append((attack_name, attack_damage))
-
-# Generate the NFT card
-create_nft_card(name, pokemon_type, attack, defense, hp, attacks)
+def clean_mons_directory():
+    """Remove all files from the mons directory"""
+    mons_dir = os.path.join(os.path.dirname(__file__), '../../mons')
+    if os.path.exists(mons_dir):
+        shutil.rmtree(mons_dir)
+        print(f"Cleaned up {mons_dir}")
