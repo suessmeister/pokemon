@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 html,
 body {
   height: 100%;
@@ -13,7 +15,68 @@ body {
   padding-left: 16px !important;
   padding-right: 16px !important;
 }
+
 .wallet-adapter-dropdown-list,
 .wallet-adapter-button {
   font-family: inherit !important;
+}
+
+.pokemon-title {
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 2px 2px 0 #2563eb,
+    4px 4px 0 #1d4ed8;
+  letter-spacing: 2px;
+}
+
+/* Pokemon type colors */
+.type-fire {
+  background-color: #FB6C6C;
+}
+
+.type-water {
+  background-color: #76BEFE;
+}
+
+.type-grass {
+  background-color: #48D0B0;
+}
+
+.type-electric {
+  background-color: #FFD86F;
+}
+
+.type-ghost {
+  background-color: #705898;
+}
+
+.type-psychic {
+  background-color: #F85888;
+}
+
+/* Card hover effect */
+.transform {
+  transition: transform 0.2s ease-in-out;
+}
+
+.transform:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e40af;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fde047;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #facc15;
 }

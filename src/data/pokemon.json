@@ -1,0 +1,157 @@
+{
+   "pokemon": [
+      {
+         "name": "Charizard",
+         "type": "fire",
+         "hp": 100,
+         "attack": 100,
+         "defense": 90,
+         "attacks": [
+            {
+               "name": "Fire Punch",
+               "damage": 50
+            },
+            {
+               "name": "Flame Charge",
+               "damage": 40
+            }
+         ]
+      },
+      {
+         "name": "Blastoise",
+         "type": "water",
+         "hp": 120,
+         "attack": 120,
+         "defense": 100,
+         "attacks": [
+            {
+               "name": "Hydro Pump",
+               "damage": 80
+            },
+            {
+               "name": "Water Gun",
+               "damage": 60
+            }
+         ]
+      },
+      {
+         "name": "Venusaur",
+         "type": "grass",
+         "hp": 110,
+         "attack": 110,
+         "defense": 100,
+         "attacks": [
+            {
+               "name": "Razor Leaf",
+               "damage": 70
+            },
+            {
+               "name": "Solar Beam",
+               "damage": 90
+            }
+         ]
+      },
+      {
+         "name": "Pikachu",
+         "type": "electric",
+         "hp": 110,
+         "attack": 110,
+         "defense": 90,
+         "attacks": [
+            {
+               "name": "Thunderbolt",
+               "damage": 80
+            },
+            {
+               "name": "Quick Attack",
+               "damage": 60
+            }
+         ]
+      },
+      {
+         "name": "Gengar",
+         "type": "ghost",
+         "hp": 120,
+         "attack": 120,
+         "defense": 100,
+         "attacks": [
+            {
+               "name": "Shadow Ball",
+               "damage": 80
+            },
+            {
+               "name": "Night Shade",
+               "damage": 70
+            }
+         ]
+      },
+      {
+         "name": "Mewtwo",
+         "type": "psychic",
+         "hp": 130,
+         "attack": 130,
+         "defense": 110,
+         "attacks": [
+            {
+               "name": "Psystrike",
+               "damage": 90
+            },
+            {
+               "name": "Shadow Punch",
+               "damage": 80
+            }
+         ]
+      },
+      {
+         "name": "Nidoking",
+         "type": "poison",
+         "hp": 100,
+         "attack": 100,
+         "defense": 130,
+         "attacks": [
+            {
+               "name": "Toxic",
+               "damage": 50
+            },
+            {
+               "name": "Poison Jab",
+               "damage": 40
+            }
+         ]
+      },
+      {
+         "name": "Nidoqueen",
+         "type": "poison",
+         "hp": 100,
+         "attack": 100,
+         "defense": 130,
+         "attacks": [
+            {
+               "name": "Toxic",
+               "damage": 50
+            },
+            {
+               "name": "Poison Jab",
+               "damage": 40
+            }
+         ]
+      }, 
+      {
+         "name": "Golduck",
+         "type": "water",
+         "hp": 100,
+         "attack": 100,
+         "defense": 130,
+         "attacks": [
+            {
+               "name": "Water Gun",
+               "damage": 80
+            },
+            {
+               "name": "Aqua Tail",
+               "damage": 70
+            }
+         ]
+      }
+   ]
+}
