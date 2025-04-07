@@ -18,7 +18,7 @@ export default function Home() {
         {/* Header with wallet */}
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold text-yellow-300 pokemon-title">
-            Pokemon NFTs
+            {/* Pokemon NFTs */}
           </h1>
           {publicKey ? (
             <div className="flex items-center gap-2">
