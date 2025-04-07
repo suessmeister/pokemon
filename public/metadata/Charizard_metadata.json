@@ -1,0 +1,60 @@
+{
+  "name": "Charizard  Card",
+  "symbol": "POKE",
+  "description": "an old legend claimed only kings could keep charizard at bay. ",
+  "seller_fee_basis_points": 500,
+  "image": "Charizard_nft.png",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Fire"
+    },
+    {
+      "trait_type": "HP",
+      "value": 120
+    },
+    {
+      "trait_type": "Attack",
+      "value": 130
+    },
+    {
+      "trait_type": "Defense",
+      "value": 105
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Regular"
+    },
+    {
+      "trait_type": "Attack 1 Name",
+      "value": "Fire Punch"
+    },
+    {
+      "trait_type": "Attack 1 Damage",
+      "value": 75
+    },
+    {
+      "trait_type": "Attack 2 Name",
+      "value": "Flame Charge"
+    },
+    {
+      "trait_type": "Attack 2 Damage",
+      "value": 60
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "Charizard_nft.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "YOUR_CREATOR_ADDRESS",
+        "share": 100
+      }
+    ]
+  }
+}

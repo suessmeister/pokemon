@@ -1,0 +1,60 @@
+{
+  "name": "Blastoise  Card",
+  "symbol": "POKE",
+  "description": "an old legend claimed the first tsunamis were caused by the cannon of blastoise",
+  "seller_fee_basis_points": 500,
+  "image": "Blastoise_nft.png",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Water"
+    },
+    {
+      "trait_type": "HP",
+      "value": 120
+    },
+    {
+      "trait_type": "Attack",
+      "value": 100
+    },
+    {
+      "trait_type": "Defense",
+      "value": 120
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Regular"
+    },
+    {
+      "trait_type": "Attack 1 Name",
+      "value": "Hydro Pump"
+    },
+    {
+      "trait_type": "Attack 1 Damage",
+      "value": 90
+    },
+    {
+      "trait_type": "Attack 2 Name",
+      "value": "Water Gun"
+    },
+    {
+      "trait_type": "Attack 2 Damage",
+      "value": 50
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "Blastoise_nft.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "YOUR_CREATOR_ADDRESS",
+        "share": 100
+      }
+    ]
+  }
+}

@@ -3,77 +3,81 @@
       {
          "name": "Charizard",
          "type": "fire",
-         "hp": 100,
-         "attack": 100,
-         "defense": 90,
+         "hp": 120,
+         "attack": 130,
+         "defense": 105,
          "attacks": [
             {
                "name": "Fire Punch",
-               "damage": 50
+               "damage": 75
             },
             {
                "name": "Flame Charge",
-               "damage": 40
+               "damage": 60
             }
-         ]
+         ],
+         "text": "an old legend claimed only kings could keep charizard at bay. "
       },
       {
          "name": "Blastoise",
          "type": "water",
          "hp": 120,
-         "attack": 120,
-         "defense": 100,
+         "attack": 100,
+         "defense": 120,
          "attacks": [
             {
                "name": "Hydro Pump",
-               "damage": 80
+               "damage": 90
             },
             {
                "name": "Water Gun",
-               "damage": 60
+               "damage": 50
             }
-         ]
+         ],
+         "text": "an old legend claimed the first tsunamis were caused by the cannon of blastoise"
       },
       {
          "name": "Venusaur",
          "type": "grass",
-         "hp": 110,
-         "attack": 110,
-         "defense": 100,
+         "hp": 120,
+         "attack": 100,
+         "defense": 115,
          "attacks": [
             {
                "name": "Razor Leaf",
-               "damage": 70
+               "damage": 55
             },
             {
                "name": "Solar Beam",
-               "damage": 90
+               "damage": 120
             }
-         ]
+         ],
+         "text": "an old claimed that venusaur was the first to derive raw power from the sun"
       },
       {
          "name": "Pikachu",
          "type": "electric",
-         "hp": 110,
-         "attack": 110,
-         "defense": 90,
+         "hp": 90,
+         "attack": 90,
+         "defense": 70,
          "attacks": [
             {
                "name": "Thunderbolt",
-               "damage": 80
+               "damage": 90
             },
             {
                "name": "Quick Attack",
-               "damage": 60
+               "damage": 40
             }
-         ]
+         ],
+         "text": "a true fan favorite with an electric personality!"
       },
       {
          "name": "Gengar",
          "type": "ghost",
-         "hp": 120,
-         "attack": 120,
-         "defense": 100,
+         "hp": 110,
+         "attack": 130,
+         "defense": 80,
          "attacks": [
             {
                "name": "Shadow Ball",
@@ -81,77 +85,118 @@
             },
             {
                "name": "Night Shade",
-               "damage": 70
+               "damage": 60
             }
-         ]
+         ],
+         "text": "just don't get too close to gengar, they're a bit spooky"
       },
       {
          "name": "Mewtwo",
          "type": "psychic",
-         "hp": 130,
-         "attack": 130,
-         "defense": 110,
+         "hp": 140,
+         "attack": 150,
+         "defense": 100,
          "attacks": [
             {
                "name": "Psystrike",
-               "damage": 90
+               "damage": 100
             },
             {
                "name": "Shadow Punch",
-               "damage": 80
+               "damage": 70
             }
-         ]
+         ],
+         "text": "it is said that mewtwo was created by the gods themselves"
       },
       {
          "name": "Nidoking",
          "type": "poison",
-         "hp": 100,
-         "attack": 100,
-         "defense": 130,
+         "hp": 110,
+         "attack": 115,
+         "defense": 100,
          "attacks": [
             {
                "name": "Toxic",
-               "damage": 50
+               "damage": 0
             },
             {
                "name": "Poison Jab",
-               "damage": 40
+               "damage": 80
             }
-         ]
+         ],
+         "text": "the first nidoking moved mountains in hopes his queen would notice him"
       },
       {
          "name": "Nidoqueen",
          "type": "poison",
-         "hp": 100,
-         "attack": 100,
-         "defense": 130,
+         "hp": 110,
+         "attack": 110,
+         "defense": 110,
          "attacks": [
             {
                "name": "Toxic",
-               "damage": 50
+               "damage": 0
             },
             {
                "name": "Poison Jab",
-               "damage": 40
+               "damage": 80
             }
-         ]
-      }, 
+         ],
+         "text": "...and the first nidoqueen rejected his advances"
+      },
       {
          "name": "Golduck",
          "type": "water",
-         "hp": 100,
-         "attack": 100,
-         "defense": 130,
+         "hp": 110,
+         "attack": 105,
+         "defense": 95,
          "attacks": [
             {
                "name": "Water Gun",
-               "damage": 80
+               "damage": 50
             },
             {
                "name": "Aqua Tail",
-               "damage": 70
+               "damage": 85
             }
-         ]
+         ],
+         "text": "golduck is a master of water, but they're also known to be quite the prankster"
+      },
+      {
+         "name": "Beedrill",
+         "type": "bug",
+         "hp": 100,
+         "attack": 125,
+         "defense": 80,
+         "attacks": [
+            {
+               "name": "Megahorn",
+               "damage": 120
+            },
+            {
+               "name": "Pin Missile",
+               "damage": 45
+            }
+         ],
+         "text": "the lean green drilling machine!"
+      },
+      {
+         "name": "Sandslash",
+         "type": "ground",
+         "hp": 110,
+         "attack": 110,
+         "defense": 120,
+         "attacks": [
+            {
+               "name": "Earthquake",
+               "damage": 100
+            },
+            {
+               "name": "Rock Throw",
+               "damage": 50
+            }
+         ],
+         "text": "the rodeo is notorious for mistaking them for an armadillo"
       }
    ]
 }

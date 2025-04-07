@@ -1,0 +1,60 @@
+{
+  "name": "Charizard Shining Card",
+  "symbol": "POKE",
+  "description": "the wingspan of a black silhouette pulsates with fire before attacking",
+  "seller_fee_basis_points": 500,
+  "image": "Charizard_nft.png",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Fire"
+    },
+    {
+      "trait_type": "HP",
+      "value": 130
+    },
+    {
+      "trait_type": "Attack",
+      "value": 140
+    },
+    {
+      "trait_type": "Defense",
+      "value": 100
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Shining"
+    },
+    {
+      "trait_type": "Attack 1 Name",
+      "value": "Scorching Flame"
+    },
+    {
+      "trait_type": "Attack 1 Damage",
+      "value": 125
+    },
+    {
+      "trait_type": "Attack 2 Name",
+      "value": "Flame Charge"
+    },
+    {
+      "trait_type": "Attack 2 Damage",
+      "value": 60
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "Charizard_nft.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "YOUR_CREATOR_ADDRESS",
+        "share": 100
+      }
+    ]
+  }
+}

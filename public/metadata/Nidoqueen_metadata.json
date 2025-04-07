@@ -1,0 +1,60 @@
+{
+  "name": "Nidoqueen  Card",
+  "symbol": "POKE",
+  "description": "...and the first nidoqueen rejected his advances",
+  "seller_fee_basis_points": 500,
+  "image": "Nidoqueen_nft.png",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Poison"
+    },
+    {
+      "trait_type": "HP",
+      "value": 110
+    },
+    {
+      "trait_type": "Attack",
+      "value": 110
+    },
+    {
+      "trait_type": "Defense",
+      "value": 110
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Regular"
+    },
+    {
+      "trait_type": "Attack 1 Name",
+      "value": "Toxic"
+    },
+    {
+      "trait_type": "Attack 1 Damage",
+      "value": 0
+    },
+    {
+      "trait_type": "Attack 2 Name",
+      "value": "Poison Jab"
+    },
+    {
+      "trait_type": "Attack 2 Damage",
+      "value": 80
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "Nidoqueen_nft.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "YOUR_CREATOR_ADDRESS",
+        "share": 100
+      }
+    ]
+  }
+}

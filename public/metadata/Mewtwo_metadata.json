@@ -1,0 +1,60 @@
+{
+  "name": "Mewtwo  Card",
+  "symbol": "POKE",
+  "description": "it is said that mewtwo was created by the gods themselves",
+  "seller_fee_basis_points": 500,
+  "image": "Mewtwo_nft.png",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Psychic"
+    },
+    {
+      "trait_type": "HP",
+      "value": 140
+    },
+    {
+      "trait_type": "Attack",
+      "value": 150
+    },
+    {
+      "trait_type": "Defense",
+      "value": 100
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Regular"
+    },
+    {
+      "trait_type": "Attack 1 Name",
+      "value": "Psystrike"
+    },
+    {
+      "trait_type": "Attack 1 Damage",
+      "value": 100
+    },
+    {
+      "trait_type": "Attack 2 Name",
+      "value": "Shadow Punch"
+    },
+    {
+      "trait_type": "Attack 2 Damage",
+      "value": 70
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "Mewtwo_nft.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "YOUR_CREATOR_ADDRESS",
+        "share": 100
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "Venusaur Shining Card",
+  "symbol": "POKE",
+  "description": "the queen of the jungle always wears the finest gold trees",
+  "seller_fee_basis_points": 500,
+  "image": "Venusaur_nft.png",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Grass"
+    },
+    {
+      "trait_type": "HP",
+      "value": 130
+    },
+    {
+      "trait_type": "Attack",
+      "value": 105
+    },
+    {
+      "trait_type": "Defense",
+      "value": 120
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Shining"
+    },
+    {
+      "trait_type": "Attack 1 Name",
+      "value": "Seed Bomb"
+    },
+    {
+      "trait_type": "Attack 1 Damage",
+      "value": 65
+    },
+    {
+      "trait_type": "Attack 2 Name",
+      "value": "Solar Beam"
+    },
+    {
+      "trait_type": "Attack 2 Damage",
+      "value": 130
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "Venusaur_nft.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "YOUR_CREATOR_ADDRESS",
+        "share": 100
+      }
+    ]
+  }
+}
