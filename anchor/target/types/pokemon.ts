@@ -1,0 +1,70 @@
+/**
+ * Program IDL in camelCase format in order to be used in JS/TS.
+ *
+ * Note that this is only a type helper and is not the actual IDL. The original
+ * IDL can be found at `target/idl/pokemon.json`.
+ */
+export type Pokemon = {
+  "address": "6X7Dmx74WDrQtTRqaGZykdRvLh9LTCwR9WPQKtoJpNSE",
+  "metadata": {
+    "name": "pokemon",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "mint",
+      "discriminator": [
+        51,
+        57,
+        225,
+        47,
+        182,
+        146,
+        137,
+        166
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "metadata",
+          "writable": true
+        },
+        {
+          "name": "systemProgram",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "rent",
+          "address": "SysvarRent111111111111111111111111111111111"
+        },
+        {
+          "name": "tokenMetadataProgram"
+        }
+      ],
+      "args": [
+        {
+          "name": "metadataTitle",
+          "type": "string"
+        },
+        {
+          "name": "metadataSymbol",
+          "type": "string"
+        },
+        {
+          "name": "metadataUri",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+};
