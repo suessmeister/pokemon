@@ -3,17 +3,19 @@
       {
          "name": "Charizard",
          "type": "fire",
-         "hp": 120,
-         "attack": 130,
-         "defense": 105,
+         "hp": 186,
+         "attack": 223,
+         "defense": 173,
          "attacks": [
             {
-               "name": "Fire Punch",
-               "damage": 75
+               "name": "Fire Spin",
+               "damage": 13,
+               "energy": 9
             },
             {
-               "name": "Flame Charge",
-               "damage": 60
+               "name": "Flamethrower",
+               "damage": 65,
+               "energy": 50
             }
          ],
          "text": "an old legend claimed only kings could keep charizard at bay. "

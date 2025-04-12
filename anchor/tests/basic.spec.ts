@@ -81,9 +81,9 @@ describe("pokemon", () => {
     try {
       const txSignature = await program.methods
         .mint(
-          "Charizard Testes",
+          "cost test charizard",
           "PKMN",
-          "https://arweave.net/n6ZUBp3Lc3x_yQRGQHafVCixHlpehSrqt0i4Dd7yu80"
+          "https://zahscp6whmnsqquibp2bvmj4toqvjnuk2vrtfb5uo7fgrpfb2v7q.arweave.net/yA8hP9Y7GyhCiAv0GrE8m6FUtorVYzKHtHfKaLyh1X8"
         )
         .accounts({
           payer: payer.publicKey,
