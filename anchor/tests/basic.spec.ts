@@ -81,7 +81,7 @@ describe("pokemon", () => {
     try {
       const txSignature = await program.methods
         .mint(
-          "Charizard NFT Sample",
+          "Charizard Testes",
           "PKMN",
           "https://arweave.net/n6ZUBp3Lc3x_yQRGQHafVCixHlpehSrqt0i4Dd7yu80"
         )

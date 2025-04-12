@@ -1,16 +1,54 @@
 'use client'
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { WalletButton } from '@/components/solana/solana-provider'
 import { useWallet } from '@solana/wallet-adapter-react'
+import { Connection, LAMPORTS_PER_SOL } from '@solana/web3.js'
 import pokemonData from '@/data/pokemon.json'
 import shiningData from '@/data/shining.json'
+
+import { getNftsForWallet } from '@/utils/helper' // adjust if path is different
+
 
 export default function Home() {
   const [imageError, setImageError] = useState<{ [key: string]: boolean }>({})
   const [activeTab, setActiveTab] = useState<'available' | 'owned'>('available')
   const { publicKey, disconnect } = useWallet()
+  const [balance, setBalance] = useState<number>(0)
+
+  const [ownedNFTs, setOwnedNFTs] = useState<any[]>([])
+
+  // Loading SOL balance 
+  useEffect(() => {
+    async function getBalance() {
+      if (!publicKey) return;
+      try {
+        const connection = new Connection('http://api.devnet.solana.com');
+        const balance = await connection.getBalance(publicKey);
+        setBalance(balance / LAMPORTS_PER_SOL);
+      } catch (error) {
+        console.error('Error fetching balance:', error);
+      }
+    }
+    getBalance();
+  }, [publicKey]);
+
+  // Loading owned NFTS
+  useEffect(() => {
+    async function fetchOwnedNFTs() {
+      if (!publicKey) return;
+      const connection = new Connection('https://api.devnet.solana.com');
+      try {
+        const nfts = await getNftsForWallet(publicKey, connection);
+        setOwnedNFTs(nfts);
+      } catch (err) {
+        console.error('Error fetching NFTs:', err);
+      }
+    }
+
+    fetchOwnedNFTs();
+  }, [publicKey]);
 
   return (
     <main className="min-h-screen p-8 bg-gradient-to-b from-blue-500 to-blue-700">
@@ -21,14 +59,16 @@ export default function Home() {
             {/* Pokemon NFTs */}
           </h1>
           {publicKey ? (
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
+              <div className="text-white bg-black/20 px-4 py-2 rounded-lg">
+                {balance.toFixed(2)} SOL
+              </div>
               <button
                 onClick={disconnect}
                 className="btn !bg-white !text-black hover:!bg-gray-100"
               >
                 Disconnect?
               </button>
-
             </div>
           ) : (
             <WalletButton className="btn btn-primary" />
@@ -143,11 +183,24 @@ export default function Home() {
               <p className="text-white mb-2">Showing Pokemon for wallet:</p>
               <p className="text-yellow-300 font-mono text-sm mb-4 break-all">{publicKey.toString()}</p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Placeholder for owned Pokemon - will be populated with actual data */}
-                <div className="bg-black/30 rounded-lg p-4 text-white">
-                  <p>No Pokemon owned yet</p>
-                  <p className="text-sm text-gray-400">Start collecting Pokemon from the Available Pokemon tab!</p>
-                </div>
+                {ownedNFTs.length > 0 ? (
+                  ownedNFTs.map((nft, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-black/30 rounded-lg p-4 text-white transform hover:scale-105 transition-transform"
+                    >
+                      <img src={nft.image} alt={nft.name} className="rounded" />
+                      <h3 className="mt-2 text-xl font-bold text-yellow-300">{nft.name}</h3>
+                      <p className="text-sm text-gray-400">{nft.description}</p>
+                    </div>
+                  ))
+                ) : (
+                  <div className="bg-black/30 rounded-lg p-4 text-white">
+                    <p>No Pokémon NFTs found in your wallet.</p>
+                    <p className="text-sm text-gray-400">Start collecting Pokémon from the Available tab!</p>
+                  </div>
+                )}
+
               </div>
             </div>
           </div>
