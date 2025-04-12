@@ -1,0 +1,25 @@
+{
+   "name": "Charizard NFT",
+   "symbol": "PKMN",
+   "description": "A fire-type Pokémon NFT.",
+   "image": "https://aghdifxte3cxyuqmo2yuyrt773y264lo2pwz2drwjvy2bnx45u7q.arweave.net/AY40FvMmxXxSDHaxTEZ__vGvcW7T7Z0ONk1xoLb87T8",
+   "attributes": [
+      {
+         "trait_type": "Type",
+         "value": "Fire"
+      },
+      {
+         "trait_type": "Stage",
+         "value": "Stage 2"
+      }
+   ],
+   "properties": {
+      "files": [
+         {
+            "uri": "https://aghdifxte3cxyuqmo2yuyrt773y264lo2pwz2drwjvy2bnx45u7q.arweave.net/AY40FvMmxXxSDHaxTEZ__vGvcW7T7Z0ONk1xoLb87T8",
+            "type": "image/png"
+         }
+      ],
+      "category": "image"
+   }
+}

@@ -5,101 +5,100 @@ import {
   createMint,
   getOrCreateAssociatedTokenAccount,
   mintTo,
+  TOKEN_PROGRAM_ID,
 } from "@solana/spl-token";
-import { PublicKey, SystemProgram } from "@solana/web3.js";
 import {
-  CreateMetadataAccountV3InstructionData,
-  MPL_TOKEN_METADATA_PROGRAM_ID
-} from "@metaplex-foundation/mpl-token-metadata";
+  PublicKey,
+  SystemProgram,
+} from "@solana/web3.js";
+
+const TOKEN_METADATA_PROGRAM_ID = new PublicKey(
+  "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+);
+
 
 describe("pokemon", () => {
-  const TOKEN_METADATA_PROGRAM_ID = new PublicKey(
-    "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
-  );
-
   const provider = anchor.AnchorProvider.env();
   anchor.setProvider(provider);
   const program = anchor.workspace.Pokemon as Program<Pokemon>;
 
-  it("mints an NFT!", async () => {
-    // Extract the payer and keypair for signing
+  it("mints an NFT with metadata and master edition!", async () => {
     const payer = provider.wallet;
-    const payerKeypair = (payer as any).payer; // Assumes NodeWallet with a 'payer' property
+    const payerKeypair = (payer as any).payer;
     const connection = provider.connection;
 
-    console.log("Payer Public Key:", payer.publicKey.toBase58());
-    console.log("Payer Keypair provided:", payerKeypair ? "Yes" : "No");
-
-    // 1. Create a new mint (NFT, 0 decimals)
-    console.log("Creating a new mint...");
+    // 1. Create mint
     const mint = await createMint(
       connection,
-      payerKeypair,  // Updated: use keypair here
+      payerKeypair,
       payer.publicKey,
-      null,
+      payer.publicKey,
       0
     );
-    console.log("Mint created. Mint Address:", mint.toBase58());
 
-    // 2. Get associated token account (ATA)
-    console.log("Getting or creating associated token account (ATA)...");
+    // 2. Associated token account
     const tokenAccount = await getOrCreateAssociatedTokenAccount(
       connection,
-      payerKeypair,  // Updated: use keypair here
+      payerKeypair,
       mint,
       payer.publicKey
     );
-    console.log("Token Account Address:", tokenAccount.address.toBase58());
 
     // 3. Mint 1 token to the ATA
-    console.log("Minting 1 token to the ATA...");
-    const mintToSignature = await mintTo(
+    await mintTo(
       connection,
-      payerKeypair,  // Updated: use keypair here
+      payerKeypair,
       mint,
       tokenAccount.address,
-      payerKeypair,  // Using the signing keypair
+      payerKeypair,
       1
     );
-    console.log("Minting complete. MintTo Transaction Signature:", mintToSignature);
 
-    // 4. Derive metadata account PDA
-    console.log("Deriving metadata PDA...");
-    const [metadataPDA] = await PublicKey.findProgramAddressSync(
+    // 4. Derive metadata PDA
+    const [metadataPDA] = PublicKey.findProgramAddressSync(
       [
         Buffer.from("metadata"),
         TOKEN_METADATA_PROGRAM_ID.toBuffer(),
-        mint.toBuffer()
+        mint.toBuffer(),
       ],
       TOKEN_METADATA_PROGRAM_ID
     );
-    console.log("Metadata PDA:", metadataPDA.toBase58()); //derived metadata account, should not exist yet.
 
-    // 5. Call your Anchor program to handle metadata creation
-    console.log("Calling Anchor program to create metadata...");
+    // 5. Derive master edition PDA
+    const [masterEditionPDA] = PublicKey.findProgramAddressSync(
+      [
+        Buffer.from("metadata"),
+        TOKEN_METADATA_PROGRAM_ID.toBuffer(),
+        mint.toBuffer(),
+        Buffer.from("edition"),
+      ],
+      TOKEN_METADATA_PROGRAM_ID
+    );
 
+    console.log("your master edition pda is", masterEditionPDA)
+
+    // 6. Send transaction through Anchor
     try {
       const txSignature = await program.methods
         .mint(
           "Charizard NFT Sample",
           "PKMN",
-          "https://aghdifxte3cxyuqmo2yuyrt773y264lo2pwz2drwjvy2bnx45u7q.arweave.net/AY40FvMmxXxSDHaxTEZ__vGvcW7T7Z0ONk1xoLb87T8"
+          "https://arweave.net/n6ZUBp3Lc3x_yQRGQHafVCixHlpehSrqt0i4Dd7yu80"
         )
         .accounts({
           payer: payer.publicKey,
           mint,
           metadata: metadataPDA,
+          masterEdition: masterEditionPDA,
           tokenMetadataProgram: TOKEN_METADATA_PROGRAM_ID,
         })
         .signers([payerKeypair])
         .rpc();
 
-      console.log("Anchor program call completed. Transaction Signature:", txSignature);
+      console.log("✅ Anchor call succeeded. Tx signature:", txSignature);
+      console.log("🎉 NFT Minted! Mint address:", mint.toBase58());
     } catch (err) {
-      console.error("🚨 Anchor program call failed:");
-      console.error(err);
-
-      // Optional: pretty print logs
+      console.error("🚨 Anchor call failed:", err);
       if ((err as any).logs) {
         console.error("🔍 Transaction logs:");
         for (const log of (err as any).logs) {
@@ -107,9 +106,5 @@ describe("pokemon", () => {
         }
       }
     }
-
-   
-
-    console.log("✅ Minted NFT! Mint address:", mint.toBase58());
-  }, 200000);
+  }, 200_000);
 });

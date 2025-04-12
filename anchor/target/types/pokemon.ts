@@ -49,6 +49,14 @@ export type Pokemon = {
         },
         {
           "name": "tokenMetadataProgram"
+        },
+        {
+          "name": "masterEdition",
+          "writable": true
+        },
+        {
+          "name": "tokenProgram",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
         }
       ],
       "args": [

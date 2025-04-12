@@ -3,6 +3,7 @@ use anchor_lang::prelude::*;
 //For defining metadata account on metaplex
 use mpl_token_metadata::{
     instructions::CreateMetadataAccountV3Builder,
+    instructions::CreateMasterEditionV3Builder,
     types::DataV2,
     ID as MPL_METADATA_ID
 };
@@ -14,7 +15,10 @@ use anchor_lang::solana_program::{
     system_program
 };
 
-declare_id!("6X7Dmx74WDrQtTRqaGZykdRvLh9LTCwR9WPQKtoJpNSE"); // program id here
+use anchor_spl::token::{Token, ID as TOKEN_PROGRAM_ID};
+
+
+declare_id!("6X7Dmx74WDrQtTRqaGZykdRvLh9LTCwR9WPQKtoJpNSE"); 
 
 #[program]
 pub mod pokemon {
@@ -34,6 +38,16 @@ pub mod pokemon {
             b"metadata",
             MPL_METADATA_ID.as_ref(),
             mint_key.as_ref(),
+        ],
+        &MPL_METADATA_ID,
+    );
+
+    let (master_edition_pda, _edition_bump) = Pubkey::find_program_address(
+        &[
+            b"metadata",
+            MPL_METADATA_ID.as_ref(),
+            mint_key.as_ref(),
+            b"edition",
         ],
         &MPL_METADATA_ID,
     );
@@ -73,11 +87,34 @@ pub mod pokemon {
     &[], // no signer seeds? unless using PDA mint authority
 )?;
 
+let master_edition_ix = CreateMasterEditionV3Builder::new()
+        .edition(master_edition_pda)
+        .mint(acc.mint.key())
+        .update_authority(acc.payer.key())
+        .mint_authority(acc.payer.key())
+        .payer(acc.payer.key())
+        .metadata(metadata_pda)
+        .max_supply(0)
+        .instruction();
 
+    invoke_signed(
+        &master_edition_ix,
+        &[
+            acc.master_edition.to_account_info(),
+            acc.mint.to_account_info(),
+            acc.payer.to_account_info(),
+            acc.payer.to_account_info(),
+            acc.metadata.to_account_info(),
+            acc.system_program.to_account_info(),
+            acc.token_metadata_program.to_account_info(),
+        ],
+        &[],
+    )?;
         Ok(())
     }
 }
 
+// do not delete the triple comments --- those are checks used by anchor
 #[derive(Accounts)]
 pub struct MintNft<'info> {
     #[account(mut)]
@@ -96,5 +133,14 @@ pub struct MintNft<'info> {
 
     /// CHECK: Metaplex Token Metadata program
     pub token_metadata_program: UncheckedAccount<'info>,
+
+    /// CHECK: Master Edition account PDA
+    #[account(mut)]
+    pub master_edition: UncheckedAccount<'info>,
+
+    /// CHECK: Metaplex!
+    pub token_program: Program<'info, Token>,
+
+   
 
 }
