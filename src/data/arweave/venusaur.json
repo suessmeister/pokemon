@@ -1,0 +1,81 @@
+{
+   "name": "Venusaur",
+   "symbol": "PKMN",
+   "description": "After a rainy day, the flower on its back smells stronger. The scent attracts other Pokémon.",
+   "image": "https://v2cx62qav2asq3br26iwjy5pgwamri5rc3765k4fymm2nmdb4jhq.arweave.net/roV_agCugShsMdeRZOOvNYDIo7EW_-6rhcMZprBh4k8",
+   "attributes": [
+      {
+         "trait_type": "Type",
+         "value": "Grass"
+      },
+      {
+         "trait_type": "Attack",
+         "value": "198"
+      },
+      {
+         "trait_type": "Defense",
+         "value": "193"
+      },
+      {
+         "trait_type": "HP",
+         "value": "190"
+      },
+      {
+         "trait_type": "Attack 1",
+         "value": "Vine Whip"
+      },
+      {
+         "trait_type": "Attack 1 Damage",
+         "value": "6"
+      },
+      {
+         "trait_type": "Attack 1 Energy",
+         "value": "5"
+      },
+      {
+         "trait_type": "Attack 1 Type",
+         "value": "Grass"
+      },
+      {
+         "trait_type": "Attack 2",
+         "value": "Petal Blizzard"
+      },
+      {
+         "trait_type": "Attack 2 Damage",
+         "value": "110"
+      },
+      {
+         "trait_type": "Attack 2 Energy",
+         "value": "100"
+      },
+      {
+         "trait_type": "Attack 2 Type",
+         "value": "Grass"
+      },
+      {
+         "trait_type": "Base Weaknesses",
+         "value": "Fire, Flying, Ice, Psychic"
+      },
+      {
+         "trait_type": "Upgraded Weaknesses",
+         "value": "None"
+      },
+      {
+         "trait_type": "Base Resistances",
+         "value": "Electric, Fairy, Fighting, Water"
+      },
+      {
+         "trait_type": "Upgraded Resistances",
+         "value": "Grass"
+      }
+   ],
+   "properties": {
+      "files": [
+         {
+            "uri": "https://v2cx62qav2asq3br26iwjy5pgwamri5rc3765k4fymm2nmdb4jhq.arweave.net/roV_agCugShsMdeRZOOvNYDIo7EW_-6rhcMZprBh4k8",
+            "type": "image/png"
+         }
+      ],
+      "category": "image"
+   }
+}

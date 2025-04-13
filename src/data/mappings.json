@@ -1,0 +1,30 @@
+{
+   "pokemon": [
+      {
+         "name": "Charizard",
+         "metadata_link": "https://zahscp6whmnsqquibp2bvmj4toqvjnuk2vrtfb5uo7fgrpfb2v7q.arweave.net/yA8hP9Y7GyhCiAv0GrE8m6FUtorVYzKHtHfKaLyh1X8"
+      },
+      {
+         "name": "Venusaur",
+         "metadata_link": "https://jcbpycbxn3cxzfbgykkwmd3sso7kvlm3cnew46pcp43acaah47kq.arweave.net/SIL8CDduxXyUJsKVZg9yk76qrZsTSW554n82AQAH59U"
+      },
+      {
+         "name": "Blastoise",
+         "metadata_link": "https://bmbair4jtotpmcvlqhxwt3jhyik7motnbeipfb6ymnv56jlzrjga.arweave.net/CwIER4mbpvYKq4Hvae0nwhX2Om0JEPKH2GNr3yV5ikw"
+      }
+   ],
+   "shining": [
+      {
+         "name": "Shining Charizard",
+         "metadata_link": ""
+      },
+      {
+         "name": "Shining Venusaur",
+         "metadata_link": ""
+      },
+      {
+         "name": "Shining Blastoise",
+         "metadata_link": ""
+      }
+   ]
+}

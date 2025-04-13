@@ -71,6 +71,10 @@ export type Pokemon = {
         {
           "name": "metadataUri",
           "type": "string"
+        },
+        {
+          "name": "pokemonName",
+          "type": "string"
         }
       ]
     }

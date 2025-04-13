@@ -23,17 +23,19 @@
       {
          "name": "Blastoise",
          "type": "water",
-         "hp": 120,
-         "attack": 100,
-         "defense": 120,
+         "hp": 188,
+         "attack": 171,
+         "defense": 207,
          "attacks": [
             {
-               "name": "Hydro Pump",
-               "damage": 90
+               "name": "Water Gun",
+               "damage": 5,
+               "energy": 5
             },
             {
-               "name": "Water Gun",
-               "damage": 50
+               "name": "Hydro Cannon",
+               "damage": 90,
+               "energy": 100
             }
          ],
          "text": "an old legend claimed the first tsunamis were caused by the cannon of blastoise"
@@ -41,17 +43,19 @@
       {
          "name": "Venusaur",
          "type": "grass",
-         "hp": 120,
-         "attack": 100,
-         "defense": 115,
+         "hp": 190,
+         "attack": 198,
+         "defense": 193,
          "attacks": [
             {
-               "name": "Razor Leaf",
-               "damage": 55
+               "name": "Vine Whip",
+               "damage": 6,
+               "energy": 5
             },
             {
-               "name": "Solar Beam",
-               "damage": 120
+               "name": "Petal Blizzard",
+               "damage": 110,
+               "energy": 100
             }
          ],
          "text": "an old claimed that venusaur was the first to derive raw power from the sun"

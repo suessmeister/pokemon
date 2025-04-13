@@ -1,0 +1,81 @@
+{
+   "name": "Blastoise",
+   "symbol": "PKMN",
+   "description": "The jets of water it spouts from the rocket cannons on its shell can punch through thick steel.",
+   "image": "https://oau7oapibyuef7njk5kyqcwqcnsly33lzzm4vttefufhyxjtaf2q.arweave.net/cCn3AegOKEL9qVdViArQE2S8b2vOWcrOZC0KfF0zAXU",
+   "attributes": [
+      {
+         "trait_type": "Type",
+         "value": "Water"
+      },
+      {
+         "trait_type": "Attack",
+         "value": "171"
+      },
+      {
+         "trait_type": "Defense",
+         "value": "207"
+      },
+      {
+         "trait_type": "HP",
+         "value": "188"
+      },
+      {
+         "trait_type": "Attack 1",
+         "value": "Water Gun"
+      },
+      {
+         "trait_type": "Attack 1 Damage",
+         "value": "5"
+      },
+      {
+         "trait_type": "Attack 1 Energy",
+         "value": "5"
+      },
+      {
+         "trait_type": "Attack 1 Type",
+         "value": "Water"
+      },
+      {
+         "trait_type": "Attack 2",
+         "value": "Hydro Cannon"
+      },
+      {
+         "trait_type": "Attack 2 Damage",
+         "value": "90"
+      },
+      {
+         "trait_type": "Attack 2 Energy",
+         "value": "50"
+      },
+      {
+         "trait_type": "Attack 2 Type",
+         "value": "Water"
+      },
+      {
+         "trait_type": "Base Weaknesses",
+         "value": "Electric, Grass"
+      },
+      {
+         "trait_type": "Upgraded Weaknesses",
+         "value": "None"
+      },
+      {
+         "trait_type": "Base Resistances",
+         "value": "Fire, Ice, Steel, Water"
+      },
+      {
+         "trait_type": "Upgraded Resistances",
+         "value": "None"
+      }
+   ],
+   "properties": {
+      "files": [
+         {
+            "uri": "https://oau7oapibyuef7njk5kyqcwqcnsly33lzzm4vttefufhyxjtaf2q.arweave.net/cCn3AegOKEL9qVdViArQE2S8b2vOWcrOZC0KfF0zAXU",
+            "type": "image/png"
+         }
+      ],
+      "category": "image"
+   }
+}

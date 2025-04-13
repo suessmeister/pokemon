@@ -65,6 +65,10 @@
         {
           "name": "metadata_uri",
           "type": "string"
+        },
+        {
+          "name": "pokemon_name",
+          "type": "string"
         }
       ]
     }
